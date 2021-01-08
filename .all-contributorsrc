@@ -13,6 +13,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "violetcraze",
+      "name": "Violet",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/43045568?v=4",
+      "profile": "https://github.com/violetcraze",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

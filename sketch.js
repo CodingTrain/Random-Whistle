@@ -17,12 +17,15 @@ let y;
 
 let whistle;
 let number;
+let download;
 
 function setup() {
   createCanvas(4880/4, 1500/4);
   number = createInput(params.randomNumber || '123456');
   let button = createButton('Generate');
   button.mousePressed(randomWalk);
+  download = createCheckbox('Download');
+  download.checked(true);
   pixelDensity(1);
   whistle = createGraphics(4880, 1500);
   whistle.pixelDensity(1);
@@ -60,7 +63,9 @@ function randomWalk() {
       break;
     }
   }
-  whistle.save("randomwalk.png");
+  if (download.checked()) {
+    whistle.save("randomwalk.png");
+  }
   imageMode(CORNER);
   image(whistle, 0, 0, width, height);
   noLoop();

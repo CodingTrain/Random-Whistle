@@ -10,7 +10,7 @@ This is a simple website that generates a random walk visualization for laser et
 Thanks for your interest in contributing. Here's a list of some improvements that would be welcomed. If you have an idea for another contribution that's also great!
 
 - [ ] JSON file or small database system to keep track of members random numbers.
-- [ ] Use parameters from url (random number or member name). *example url: https://codingtrain.github.io/Random-Whistle/index.html?random=12345&member=dan%20shiffman*
+- [x] Use parameters from url (random number or member name). *example url: https://codingtrain.github.io/Random-Whistle/index.html?random=12345&member=dan%20shiffman*
 - [x] A view on github button.
 - [x] Checkbox for downloading generated image.
 - [ ] Styling improvements.

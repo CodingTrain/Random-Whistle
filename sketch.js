@@ -1,3 +1,17 @@
+const urlParams = new URLSearchParams(window.location.search);
+
+const rawDebug = urlParams.get('debug');
+const rawMemberName = urlParams.get('member')?.trim();
+const rawRandomNumber = urlParams.get('random')?.trim();
+
+const params = {
+  debug: rawDebug === 'false' ? false : rawDebug !== null,
+  memberName: rawMemberName,
+  randomNumber: Number.isNaN(Number.parseInt(rawRandomNumber)) ? null : rawRandomNumber, // If number is valid number, store it
+};
+
+if (params.debug) console.table(params);
+
 let x;
 let y;
 
@@ -6,14 +20,13 @@ let number;
 
 function setup() {
   createCanvas(4880/4, 1500/4);
-  number = createInput('123456');
-  let button = createButton('generate');
-  button.mousePressed(randomWalk)
+  number = createInput(params.randomNumber || '123456');
+  let button = createButton('Generate');
+  button.mousePressed(randomWalk);
   pixelDensity(1);
   whistle = createGraphics(4880, 1500);
   whistle.pixelDensity(1);
   background(200);
-
 }
 
 function randomWalk() {

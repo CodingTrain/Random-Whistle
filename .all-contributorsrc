@@ -50,6 +50,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dg1234uk",
+      "name": "Daniel Granger",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2423155?v=4",
+      "profile": "https://dangranger.co.uk",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

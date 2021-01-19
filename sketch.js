@@ -22,7 +22,7 @@ let sel;
 let number;
 let download;
 
-const membersArray = JSON.parse(members);
+const membersArray = JSON.parse(members).sort((a, b) => a.name > b.name ? 1 : -1);
 
 function setup() {
   createCanvas(4880 / 4, 1500 / 4);

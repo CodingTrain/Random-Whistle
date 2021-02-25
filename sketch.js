@@ -21,11 +21,11 @@ let whistle;
 let sel;
 let number;
 let download;
-
+const stepSize = 4;
 const membersArray = JSON.parse(members).sort((a, b) => a.name > b.name ? 1 : -1);
 
 function setup() {
-  createCanvas(4880 / 4, 1500 / 4);
+  createCanvas(4880 / stepSize, 1500 / stepSize);
   sel = createSelect();
   sel.option('Select Member');
   membersArray.forEach((member, index) => {
@@ -54,7 +54,6 @@ function randomWalk() {
   whistle.background(255);
   x = whistle.width / 2;
   y = whistle.height / 2;
-  const stepSize = 4;
   randomSeed(parseInt(number.value()));
   for (let i = 0; i < 1000000; i++) {
     //canvas.stroke(0);
@@ -80,7 +79,19 @@ function randomWalk() {
         y = y - stepSize;
         break;
     }
+
+    if (x < stepSize / 2) {
+      x = whistle.width - stepSize / 2;
+    } else if (x > whistle.width - stepSize / 2) {
+      x = stepSize / 2;
+    }
+    if (y < stepSize / 2) {
+      y = whistle.height - stepSize / 2;
+    } else if (y > whistle.height - stepSize / 2) {
+      y = stepSize / 2;
+    }
   }
+
   if (download.checked()) {
     whistle.save('randomwalk.png');
   }

@@ -6,5 +6,6 @@ const members = `
     { "name": "Arnav Sirigere", "random": 28461 },
     { "name": "UnOriginalPun",  "random": 3400  },
     { "name": "christopher tubeHD",  "random": 12127  }
+    { "name": "Brian Gallaher",  "random": 300028  }
   ]
 `;

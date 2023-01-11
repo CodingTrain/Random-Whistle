@@ -10,8 +10,8 @@ function setup() {
 
   let params = getURLParams();
   console.table(params);
-  let randomNumber = params.random || '12345';
-  let seed = params.seed || 'Choo Choo!';
+  let name = params.name || 'Choo Choo!';
+  let seed = params.seed || '12345';
   randomSeed(int(seed));
 
   createP(

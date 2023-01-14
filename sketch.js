@@ -10,12 +10,15 @@ function setup() {
 
   let params = getURLParams();
   console.table(params);
-  let name = params.name || 'Choo Choo!';
+  let name = params.name || 'Choo Choo';
   let seed = params.seed || '12345';
   randomSeed(int(seed));
 
-  createP(
-    `Thank you ${name} for your support of The Coding Train! Enjoy this unique random walk with your personalized seed of ${seed}!`
+  select('#thanks').html(
+    `Thank you ${name} for your support of The Coding Train!`
+  );
+  select('#walk').html(
+    `Enjoy this unique random walk with your personalized seed of ${seed}!`
   );
 }
 

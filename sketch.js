@@ -2,7 +2,7 @@ let x;
 let y;
 
 function setup() {
-  const canvas = createCanvas(640, 360);
+  const canvas = createCanvas(800, 500);
   canvas.parent('p5canvas');
   background(0);
   x = width / 2;

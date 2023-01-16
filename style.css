@@ -6,11 +6,26 @@ body {
 
 #p5canvas {
   background-color: #2dc5f4;
-  width: 640px;
-  margin: auto;
+  position: absolute;
+  width: 850px;
+  height: 680px;
+  margin-top: 200px;
+  left: 50%;
+  margin-left: -425px;
 }
+
+#topper{
+  width:850px;
+  margin-top:-250px;
+  left:50%;
+}
+
 #thanks {
   font-size: 150%;
+}
+
+#defaultCanvas0{
+  margin-top: 25px;
 }
 
 .github-corner:hover .octo-arm {

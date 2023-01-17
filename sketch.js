@@ -1,6 +1,7 @@
 let x;
 let y;
 let seed;
+let bold;
 
 function setup() {
   const canvas = createCanvas(800, 500);
@@ -46,6 +47,7 @@ function draw() {
   strokeWeight(1);
   point(x, y);
   const r = int(random(4));
+  //TODO: add stepsize and scale for mobile 
   switch (r) {
     case 0:
       x = x + 1;

@@ -68,6 +68,15 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "KobeLiesenborgs",
+      "name": "Kobe Liesenborgs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31523219?v=4",
+      "profile": "https://github.com/KobeLiesenborgs",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

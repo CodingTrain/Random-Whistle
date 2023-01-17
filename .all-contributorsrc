@@ -59,6 +59,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jasontheillustrator",
+      "name": "Jason Heglund",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103963888?v=4",
+      "profile": "https://github.com/jasontheillustrator",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -66,5 +75,6 @@
   "projectOwner": "CodingTrain",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }

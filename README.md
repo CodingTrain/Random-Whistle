@@ -1,6 +1,6 @@
 # Random Whistle Generator
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This is a simple website that generates a random walk visualization for laser etching on train whistles. The initial p5.js sketch was created on the first Coding Train live stream of 2021 by Daniel Shiffman: https://youtu.be/2Oz_d2q7GQQ.
@@ -32,6 +32,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.hunterparks.com"><img src="https://avatars3.githubusercontent.com/u/17714503?v=4?s=100" width="100px;" alt="Hunter Parks"/><br /><sub><b>Hunter Parks</b></sub></a><br /><a href="https://github.com/CodingTrain/Random-Whistle/commits?author=hunterparks" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dangranger.co.uk"><img src="https://avatars2.githubusercontent.com/u/2423155?v=4?s=100" width="100px;" alt="Daniel Granger"/><br /><sub><b>Daniel Granger</b></sub></a><br /><a href="https://github.com/CodingTrain/Random-Whistle/commits?author=dg1234uk" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jasontheillustrator"><img src="https://avatars.githubusercontent.com/u/103963888?v=4?s=100" width="100px;" alt="Jason Heglund"/><br /><sub><b>Jason Heglund</b></sub></a><br /><a href="#design-jasontheillustrator" title="Design">🎨</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KobeLiesenborgs"><img src="https://avatars.githubusercontent.com/u/31523219?v=4?s=100" width="100px;" alt="Kobe Liesenborgs"/><br /><sub><b>Kobe Liesenborgs</b></sub></a><br /><a href="https://github.com/CodingTrain/Random-Whistle/commits?author=KobeLiesenborgs" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

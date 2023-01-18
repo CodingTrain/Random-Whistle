@@ -11,6 +11,7 @@ function setup() {
   console.table(params);
   let name = params.name || 'Choo Choo';
   seed = params.seed || '12345';
+  zoom = parseInt(params.zoom) || 2;
   randomSeed(int(seed));
 
   select('#thanks').html(
@@ -44,22 +45,22 @@ function draw() {
     if(frameCount%5==0){hueState = ((hueState+1)%360)};
     stroke(hueState,100,100);
   }
-  strokeWeight(1);
+  strokeWeight(zoom);
   point(x, y);
   const r = int(random(4));
   //TODO: add stepsize and scale for mobile 
   switch (r) {
     case 0:
-      x = x + 1;
+      x = x + zoom;
       break;
     case 1:
-      x = x - 1;
+      x = x - zoom;
       break;
     case 2:
-      y = y + 1;
+      y = y + zoom;
       break;
     case 3:
-      y = y - 1;
+      y = y - zoom;
       break;
   }
 }

@@ -2,29 +2,33 @@ let x;
 let y;
 let seed;
 let bold;
+let data;
+let inputFromField = -1;
+
+function preload() {
+  data = loadJSON('supporterDatabase.json');
+}
 
 function setup() {
   const canvas = createCanvas(800, 500);
   canvas.parent('p5canvas');
-  rainbow = false;
-  let params = getURLParams();
-  console.table(params);
-  let name = params.name || 'Choo Choo';
-  seed = params.seed || '12345';
-  zoom = parseInt(params.zoom) || 8;
-  randomSeed(int(seed));
 
-  select('#thanks').html(
-    `Thank you ${name} for your support of The Coding Train!`
-  );
-  select('#walk').html(
-    `Enjoy this unique random walk with your personalized seed of ${seed}!`
-  );
   resetSketch();
 
   select('#go').mousePressed(function () {
     const number = select('#number').value();
-    console.log(number);
+    if(data[number]){
+      inputFromField = number;
+      resetSketch();
+    }
+    else{
+      select('#thanks').html(
+        `Thank you for your support of The Coding Train!`
+      );
+      select('#walk').html(
+        `The number ${number} isn't a valid whistle number!\n Please enter a correct number instead!`
+      );
+    }
   });
 }
 
@@ -41,38 +45,67 @@ function keyPressed() {
 }
 
 function draw() {
-  colorMode(HSB);
-  if (!rainbow) {
-    stroke(360, 0, 100);
-  } else {
-    if (frameCount % 5 == 0) {
-      hueState = (hueState + 1) % 360;
+  if(inputFromField != -1){
+    colorMode(HSB);
+    if (!rainbow) {
+      stroke(360, 0, 100);
+    } else {
+      if (frameCount % 5 == 0) {
+        hueState = (hueState + 1) % 360;
+      }
+      stroke(hueState, 100, 100);
     }
-    stroke(hueState, 100, 100);
-  }
-  strokeWeight(zoom);
-  point(x, y);
-  const r = int(random(4));
-  // TODO: add stepsize and scale for mobile
-  switch (r) {
-    case 0:
-      x = x + zoom;
-      break;
-    case 1:
-      x = x - zoom;
-      break;
-    case 2:
-      y = y + zoom;
-      break;
-    case 3:
-      y = y - zoom;
-      break;
+    strokeWeight(zoom);
+    point(x, y);
+    const r = int(random(4));
+    // TODO: add stepsize and scale for mobile
+    switch (r) {
+      case 0:
+        x = x + zoom;
+        break;
+      case 1:
+        x = x - zoom;
+        break;
+      case 2:
+        y = y + zoom;
+        break;
+      case 3:
+        y = y - zoom;
+        break;
+    }
+  }else{
+    setup();
   }
 }
 function resetSketch() {
+  rainbow = false;
+  let params = getURLParams();
+  let dataUser = data[inputFromField] || {"name": "placholder", "seed": 1}
+  let name = dataUser["name"];
+  let seed = dataUser["seed"];
+  zoom = parseInt(params.zoom) || 8;
+  randomSeed(int(seed));
+
+  if(inputFromField != -1){
+    select('#thanks').html(
+      `Thank you ${name} for your support of The Coding Train!`
+    );
+    select('#walk').html(
+      `Enjoy this unique random walk with your personalized seed of ${seed}!`
+    );
+  }
+  else{
+    select('#thanks').html(
+      `Thank you for your support of The Coding Train!`
+    );
+    select('#walk').html(
+      
+    );
+  }
   background(0);
   x = width / 2;
   y = height / 2;
   hueState = 0;
   randomSeed(int(seed));
+  
 }

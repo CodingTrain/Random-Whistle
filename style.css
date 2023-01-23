@@ -5,9 +5,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-* {
-  border: 1px solid red;
-}
 
 input[type='text'] {
   font-size: 24px;
@@ -16,7 +13,7 @@ input[type='text'] {
 #p5canvas {
   background-color: #2dc5f4;
   width: 850px;
-  height: 680px;
+  height: 740px;
   margin: auto;
   margin-top: 250px;
 }
@@ -41,6 +38,37 @@ input[type='text'] {
   margin-top: -20px;
   margin-bottom: 10px;
 }
+
+#go {
+  background-color: #70327E; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#number {
+  background-color: white; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 16px;
+}
+
+#number::placeholder{
+  color: rgb(170, 170, 170);
+}
+
+
 
 .github-corner:hover .octo-arm {
   z-index: 2;

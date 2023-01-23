@@ -10,9 +10,9 @@ function preload() {
 }
 
 function setup() {
-  const canvas = createCanvas(800, 500);
+  const canvas = createCanvas(800, 800);
   canvas.parent('p5canvas');
-
+  rainbow = false;
   resetSketch();
 
   select('#go').mousePressed(function () {
@@ -38,7 +38,6 @@ function toggleRainbow() {
 }
 
 function keyPressed() {
-  print(keyCode);
   if (keyCode === UP_ARROW || keyCode == 38) {
     toggleRainbow();
     resetSketch();
@@ -79,7 +78,6 @@ function draw() {
   }
 }
 function resetSketch() {
-  rainbow = false;
   let params = getURLParams();
   let dataUser = data[inputFromField] || {"name": "placholder", "seed": 1}
   let name = dataUser["name"];

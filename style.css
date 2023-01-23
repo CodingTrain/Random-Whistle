@@ -27,6 +27,7 @@ input[type='text'] {
 #thanks {
   font-size: 1.7em;
   font-weight: bold;
+  white-space: pre-line;
 }
 
 #interface {
@@ -91,6 +92,7 @@ input[type='text'] {
     transform: rotate(10deg);
   }
 }
+
 
 @media (max-width: 500px) {
   .github-corner:hover .octo-arm {

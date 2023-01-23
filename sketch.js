@@ -23,11 +23,12 @@ function setup() {
     }
     else{
       select('#thanks').html(
-        `Thank you for your support of The Coding Train!`
+        `That number isn't a valid whistle number!`
       );
       select('#walk').html(
-        `The number ${number} isn't a valid whistle number!\n Please enter a correct number instead!`
+        ""
       );
+      select("#number").value("")
     }
   });
 }
@@ -92,14 +93,6 @@ function resetSketch() {
     );
     select('#walk').html(
       `Enjoy this unique random walk with your personalized seed of ${seed}!`
-    );
-  }
-  else{
-    select('#thanks').html(
-      `Thank you for your support of The Coding Train!`
-    );
-    select('#walk').html(
-      
     );
   }
   background(0);

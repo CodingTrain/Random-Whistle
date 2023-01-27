@@ -2,35 +2,71 @@ body {
   background-color: #fff;
   text-align: center;
   color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+input[type='text'] {
+  font-size: 24px;
 }
 
 #p5canvas {
   background-color: #2dc5f4;
-  position: absolute;
   width: 850px;
-  height: 680px;
+  height: 1024px;
+  margin: auto;
   margin-top: 250px;
-  left: 50%;
-  margin-left: -425px;
 }
 
-#topper{
-  width:850px;
-  margin-top:-220px;
-  left:50%;
+#topper {
+  width: 850px;
+  margin-top: -220px;
+  left: 50%;
 }
 
 #thanks {
   font-size: 1.7em;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+  white-space: pre-line;
+}
+
+#interface {
+  margin-bottom: 10px;
 }
 
 #walk {
   font-size: 1.25em;
-  font-family: 'Roboto', sans-serif;
   margin-top: -20px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+}
+
+#go {
+  background-color: #70327E; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#number {
+  background-color: white; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 16px;
+}
+
+#number::placeholder{
+  color: rgb(170, 170, 170);
 }
 
 
@@ -56,6 +92,7 @@ body {
     transform: rotate(10deg);
   }
 }
+
 
 @media (max-width: 500px) {
   .github-corner:hover .octo-arm {

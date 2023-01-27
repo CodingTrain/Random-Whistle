@@ -9,28 +9,26 @@ function preload() {
   data = loadJSON('supporterDatabase.json');
 }
 
+function updateNumber() {
+  const number = select('#number').value();
+  if (data[number]) {
+    inputFromField = number;
+    resetSketch();
+  } else {
+    select('#thanks').html(`That number isn't a valid whistle number!`);
+    select('#walk').html('');
+    select('#number').value('');
+  }
+}
+
 function setup() {
   const canvas = createCanvas(800, 800);
   canvas.parent('p5canvas');
   rainbow = false;
   resetSketch();
 
-  select('#go').mousePressed(function () {
-    const number = select('#number').value();
-    if(data[number]){
-      inputFromField = number;
-      resetSketch();
-    }
-    else{
-      select('#thanks').html(
-        `That number isn't a valid whistle number!`
-      );
-      select('#walk').html(
-        ""
-      );
-      select("#number").value("")
-    }
-  });
+  select('#go').mousePressed(updateNumber);
+  select('#number').changed(updateNumber);
 }
 
 function toggleRainbow() {
@@ -45,7 +43,7 @@ function keyPressed() {
 }
 
 function draw() {
-  if(inputFromField != -1){
+  if (inputFromField != -1) {
     colorMode(HSB);
     if (!rainbow) {
       stroke(360, 0, 100);
@@ -73,24 +71,24 @@ function draw() {
         y = y - zoom;
         break;
     }
-  }else{
+  } else {
     setup();
   }
 }
 function resetSketch() {
   let params = getURLParams();
-  let dataUser = data[inputFromField] || {"name": "placholder", "seed": 1}
-  let name = dataUser["name"];
-  let seed = dataUser["seed"];
+  let dataUser = data[inputFromField] || { name: 'placholder', seed: 1 };
+  let name = dataUser['name'];
+  let seed = dataUser['seed'];
   zoom = parseInt(params.zoom) || 8;
   randomSeed(int(seed));
 
-  if(inputFromField != -1){
+  if (inputFromField != -1) {
     select('#thanks').html(
-      `Thank you ${name} for your support of The Coding Train!`
+      `❤️ Thank you ${name} for your support of The Coding Train! ❤️`
     );
     select('#walk').html(
-      `Enjoy this unique random walk with your personalized seed of ${seed}!`
+      `🚂 Enjoy this unique random walk with your personalized seed of ${seed}! 🔢`
     );
   }
   background(0);
@@ -98,5 +96,4 @@ function resetSketch() {
   y = height / 2;
   hueState = 0;
   randomSeed(int(seed));
-  
 }

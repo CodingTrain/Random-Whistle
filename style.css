@@ -5,7 +5,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
 input[type='text'] {
   font-size: 24px;
 }
@@ -41,7 +40,7 @@ input[type='text'] {
 }
 
 #go {
-  background-color: #70327E; /* Green */
+  background-color: #70327e; /* Green */
   border: none;
   color: white;
   padding: 8px 16px;
@@ -65,11 +64,9 @@ input[type='text'] {
   margin-right: 16px;
 }
 
-#number::placeholder{
+#number::placeholder {
   color: rgb(170, 170, 170);
 }
-
-
 
 .github-corner:hover .octo-arm {
   z-index: 2;
@@ -92,7 +89,6 @@ input[type='text'] {
     transform: rotate(10deg);
   }
 }
-
 
 @media (max-width: 500px) {
   .github-corner:hover .octo-arm {
